@@ -1,0 +1,3 @@
+service {
+	"DEMO_PROJECT.DEMO_DB.Tables::DEMO_TABLE" as "demptable" keys generate local "ID"; ;
+}

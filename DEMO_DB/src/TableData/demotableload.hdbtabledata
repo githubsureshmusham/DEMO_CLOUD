@@ -1,0 +1,26 @@
+{
+  "format_version": 1,
+  "imports": 
+   [
+    {
+    	"target_table" : "DEMO_PROJECT.DEMO_DB.Tables::DEMO_TABLE",
+    	"source_data" : { 
+			"data_type" : "CSV", 
+			"file_name" : "DEMO_PROJECT.DEMO_DB.datafiles::sample_demofile.csv", 
+			"has_header" : true,
+			"type_config" : { 
+				"delimiter" : "," 
+				} 
+    	},
+    	"import_settings" : {
+			"import_columns" : [ 
+				"ID", 
+				"FIRSTNAME"			
+			],
+			"include_filter" : [],
+			"exclude_filter" : []
+			
+		}
+    }
+   ] 
+}

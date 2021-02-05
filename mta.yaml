@@ -1,0 +1,26 @@
+ID: DEMO_PROJECT
+_schema-version: '2.1'
+version: 0.0.1
+modules:
+  - name: DEMO_DB
+    type: hdb
+    path: DEMO_DB
+    requires:
+      - name: hdi_DEMO_DB
+  - name: DEMO_JS
+    type: nodejs
+    path: DEMO_JS
+    provides:
+      - name: DEMO_JS_api
+        properties:
+          url: '${default-url}'
+    requires:
+      - name: hdi_DEMO_DB
+      - name: DEMO_DB
+resources:
+  - name: hdi_DEMO_DB
+    properties:
+      hdi-container-name: '${service-name}'
+    type: com.sap.xs.hdi-container
+    parameters:
+      service-name: DEMO_HDI_Container
