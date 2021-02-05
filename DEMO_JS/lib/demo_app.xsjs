@@ -12,6 +12,7 @@ else {
 	output=output + rs.getString(1);
 }
 
+
 rs.close();
 pstmt.close();
 conn.close();
